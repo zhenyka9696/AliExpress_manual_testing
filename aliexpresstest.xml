@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S9</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Регистрация</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C2557</id>
+				<title>Регистрация продавца</title>
+												<template>Test Case (Steps)</template>
+																<type>Smoke &amp; Sanity</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Зайти на сайт https://aliexpress.ru/</preconds>
+										<steps_separated><step>
+<index>1</index><content>Кликнуть на выпадающий список &quot;Продавайте на AliExpress&quot;.
+
+</content><expected>В выпадающем списке появляются 2 вкладки.</expected></step>
+<step>
+<index>2</index><content>Кликнуть из списка: стать продавцом.</content><expected>Открывается новая вкладка с предложением открыть магазин.</expected></step>
+<step>
+<index>3</index><content>Кликнуть на кнопку открыть магазин.</content><expected>Открывается новая вкладка с 3 формами для регистрации.</expected></step>
+<step>
+<index>4</index><content>Заполнить формы случайно-интуитивным образом. 
+
+Поскольку нет возможности для позитивного сценария, нужно тестировать негативный.</content><expected>Сайт не должен допустить некорректную регистрацию и указать где именно совершена ошибка пользователем.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Тестирование кроссплатформенности</name>
+		<description>Проверка наличия десктопных и мобильных приложений.</description>
+										<sections>
+		<section>
+		<name>Проверка наличия мобильных приложений</name>
+		<description>Здесь будут описаны тест-кейсы для проверки наличия мобильных приложений в appstore и play market.</description>
+						<cases>
+												<case>
+				<id>C2559</id>
+				<title>Наличие приложения в appstore</title>
+												<template>Test Case (Steps)</template>
+																<type>Accessibility</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Зайти на сайт https://aliexpress.ru/</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать кнопку &quot;приложение&quot; в заголовке сайта</content><expected>Переход на вкладку с предложением скачать на различных площадках.</expected></step>
+<step>
+<index>2</index><content>Проверить обе кнопки, которые должны переадресовывать на страницу appstore с приложением AliExpress</content><expected>Переход на appstore, где предложат скачать приложение на мобильное устройство.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2560</id>
+				<title>Наличие приложения в play market</title>
+												<template>Test Case (Steps)</template>
+																<type>Accessibility</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Зайти на сайт https://aliexpress.ru/</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать кнопку &quot;приложение&quot; в заголовке сайта
+</content><expected>Переход на вкладку с предложением скачать на различных площадках.
+</expected></step>
+<step>
+<index>2</index><content>Кликнуть кнопку, которая должна переадресовывать на страницу play market с приложением AliExpress
+</content><expected>Переход на play market где предложат скачать приложение на мобильное устройство.
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>Тестирование локализации</name>
+		<description>Тестирование особенностей локализации, таких как: соотношение страны с её флагом, конвертация валюты.</description>
+						<cases>
+												<case>
+				<id>C2561</id>
+				<title>Выпадающий список &quot;флаг/язык&quot;</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds> Зайти на сайт https://aliexpress.ru/</preconds>
+										<steps_separated><step>
+<index>1</index><content>Кликнуть на выпадающий список, на котором изображён флаг.</content><expected>Появляются 3 других выпадающих списка (доставка в;язык;валюта).</expected></step>
+<step>
+<index>2</index><content>Кликнуть на выпадающий список &quot;доставка в&quot;.</content><expected>Появляется список стран-клиентов.</expected></step>
+<step>
+<index>3</index><content>Проверить соотношение стран и флагов.</content><expected>Названия стран совпадают с изображениями их флагов.</expected></step>
+<step>
+<index>4</index><content>Кликнуть снова на выпадающий список &quot;доставка в&quot;.</content><expected>Список стран свернулся.</expected></step>
+<step>
+<index>5</index><content>Кликнуть на выпадающий список &quot;язык&quot;.</content><expected>Появляется список языков.</expected></step>
+<step>
+<index>6</index><content>Кликнуть снова на выпадающий список &quot;язык&quot;.</content><expected>Список языков свернулся.</expected></step>
+<step>
+<index>7</index><content>Кликнуть на выпадающий список &quot;валюта&quot;.</content><expected>Появляется список валют.</expected></step>
+<step>
+<index>8</index><content>Кликнуть снова на выпадающий список &quot;валюта&quot;.</content><expected>Список валют свернулся.</expected></step>
+<step>
+<index>9</index><content>В выпадающем списке &quot;доставка в&quot; выбрать &quot;Belarus&quot;; В выпадающем списке &quot;язык&quot; выбрать &quot;русский&quot;; В выпадающем списке &quot;валюта&quot; выбрать &quot;BYR Belarussian Ruble&quot;; Нажать кнопку сохранить.</content><expected>Язык стал русским, а цена в бел. рублях.</expected></step>
+<step>
+<index>10</index><content>Прокрутить сайт вниз до надписи &quot;Рекомендуем вам&quot;; кликнуть на первый товар; обратить внимание на краткое описание и цену.</content><expected>Переход к странице покупки товара; краткое описание и цена соответствует той, что была на главной странице.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
